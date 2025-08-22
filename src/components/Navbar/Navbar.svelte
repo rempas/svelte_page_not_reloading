@@ -1,0 +1,59 @@
+<script>
+   let { nav_type } = $props()
+
+   import { divs } from '$lib/divs.svelte'
+
+   import LeftNavItems from "components/Navbar/LeftNavItems.svelte"
+   import QuoteOfTheDay from "components/Navbar/QuoteOfTheDay.svelte"
+   import Switches from "components/Navbar/Switches.svelte"
+</script>
+
+<nav bind:this={divs[nav_type]} class="{nav_type} flex bg-rose-200
+rounded-[3px] text-slate-800 dark:bg-slate-900 dark:text-rose-200
+place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
+   <LeftNavItems {nav_type} />
+
+   {#if nav_type == "normal"}
+      <QuoteOfTheDay />
+   {/if}
+
+   {#if nav_type == "normal"}
+      <Switches />
+   {/if}
+</nav>
+
+<style lang="postcss">
+   @reference "tailwindcss";
+
+   nav.sidebar {
+      position: fixed;
+      top: 0;
+      left: -700px;
+      z-index: 2;
+
+      width: calc(100vw / 2.3);
+      height: 100%;
+
+      border-radius: 0px 10px 10px 0px;
+      box-shadow: 3px 0 10px rgb(0, 0, 0, 0.3);
+      background: theme(--color-rose-200/65%);
+      backdrop-filter: blur(10px);
+
+      transition-property: left;
+      transition-duration: 1.5s;
+      transition-delay: 0s;
+
+      align-items: start;
+      justify-content: center;
+   }
+
+   :global(.dark) nav.sidebar {
+      background: theme(--color-slate-900/65%);
+   }
+
+   @media (max-width: 700px) {
+      nav.normal :global(#left_items) {
+         display: none;
+      }
+   }
+</style>

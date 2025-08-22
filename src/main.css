@@ -1,21 +1,17 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-:global(body) {
-   margin: 0;
-   min-width: 100vw;
-   min-height: 100vh;
-   background-image: url("../static/images/base_body_img.jpg");
-   background-size: cover; /* Ensures the image covers the div */
-   background-position: center; /* Centers the image */
+@font-face {
+   font-family: "Mouldy Cheese";
+   src: url("/fonts/MouldyCheeseRegular.ttf");
 }
 
-:global(#app) {
-   padding: 10px 16px;
-   min-width: 100vw;
-   min-height: 100vh;
+@font-face {
+   font-family: "Superior Serif Regular";
+   src: url("/fonts/LTSuperiorSerif-Regular.otf");
 }
 
-#navbar {
-   border-radius: 1px;
+@font-face {
+   font-family: "Superior Serif Medium";
+   src: url("/fonts/LTSuperiorSerif-Medium.otf");
 }
