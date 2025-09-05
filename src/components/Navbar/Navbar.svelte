@@ -25,10 +25,16 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
 <style lang="postcss">
    @reference "tailwindcss";
 
+   nav {
+      z-index: 2;
+   }
+
    nav.sidebar {
+      align-items: start;
+      justify-content: center;
+      left: -100%;
       position: fixed;
       top: 0;
-      left: -700px;
       z-index: 2;
 
       width: calc(100vw / 2.3);
@@ -39,12 +45,7 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
       background: theme(--color-rose-200/65%);
       backdrop-filter: blur(10px);
 
-      transition-property: left;
-      transition-duration: 1.5s;
-      transition-delay: 0s;
-
-      align-items: start;
-      justify-content: center;
+      transition: left 1.5s;
    }
 
    :global(.dark) nav.sidebar {

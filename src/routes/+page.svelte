@@ -6,13 +6,13 @@
 
    $effect.pre(() => {
       tick().then(() => {
-         divs.app.style.backgroundImage = "url(/images/home.jpg)"
+         divs.app.style.backgroundImage = "url(/images/quote1.svg)"
          closeNavbar()
       });
    });
 </script>
 
-<div class="flex flex-col place-content-between">
+<div class="flex flex-col place-content-between mt-20">
    {@html text.body.home}
 </div>
 
@@ -25,10 +25,6 @@
       font-size: 1.3rem + 1vw;
       color: theme(--color-rose-200);
       font-size: calc(1.90rem + 0.1vw);
-   }
-
-   :global(.dark h1) {
-      color: theme(--color-slate-800);
    }
 
    :global(:is(p:nth-child(2), p:nth-child(3))) {
@@ -55,7 +51,7 @@
    }
 
    :global(.dark) {
-      div :global(a) {
+      div :global(:is(a, h1)) {
          color: theme(--color-slate-800);
       }
 

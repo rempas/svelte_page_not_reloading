@@ -1,6 +1,6 @@
 <script lang="ts">
    import { divs } from '$lib/divs.svelte'
-   import { openNavbar, closeNavbar, navbar_collapsed } from "$lib/toggleNavbar.svelte"
+   import { openNavbar, hideNavbar, navbar_collapsed } from "$lib/toggleNavbar.svelte"
    import Navbar from 'components/Navbar/Navbar.svelte'
    import "../main.css";
 
@@ -9,7 +9,7 @@
 
    $effect(() => {
       if (app_width >= 700 && !navbar_collapsed)
-         divs.sidebar.style.left = "-700px"
+         hideNavbar()
 
       else if (app_width < 700 && !navbar_collapsed)
          openNavbar()

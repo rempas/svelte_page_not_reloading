@@ -11,6 +11,6 @@
 <style>
    #switches button {
       cursor: pointer;
-      width: 1.3rem;
+      width: 1.4rem;
    }
 </style>

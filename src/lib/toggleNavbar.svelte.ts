@@ -15,6 +15,10 @@ export function openNavbar() {
 }
 
 export function closeNavbar() {
-   divs.sidebar.style.left = "-700px"
+   hideNavbar()
    navbar_collapsed = true
+}
+
+export function hideNavbar() {
+   divs.sidebar.style.left = "-100%"
 }

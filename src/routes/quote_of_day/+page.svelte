@@ -2,70 +2,74 @@
    import { divs } from '$lib/divs.svelte'
    import { tick } from 'svelte';
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
+   import { getQuote } from '$lib/quote_of_day.ts'
 
    $effect.pre(() => {
       tick().then(() => {
-         divs.app.style.backgroundImage = "url(/images/quote_of_day.jpg)"
+         divs.app.style.backgroundImage = "url(/images/quote3.svg)"
          closeNavbar()
       });
    });
 </script>
 
-<div>
-  <h1>This is an <strong>example</strong> block of <strong>text</strong>.</h1>
-  <p>An SVG is used to <strong>emphasize</strong> a single word of a block of text by giving it an underline that uses an SVG. Semantically it is emphasized with a <code>strong</code> tag and visually it is emphasized with the SVG.</p>
+<div id="container">
+   <div id="overlay"></div>
+   <div id="quote">
+      <div class="tag">“</div>
+      <i>{@html getQuote()}</i>
+      <div id="closing_tag" class="tag"><div>”</div></div>
+   </div>
 </div>
 
 <style lang="postcss">
    @reference "tailwindcss";
 
-   strong {
-      position: relative;
-   }
-
-   strong::after {
-      content: "";
-      position: absolute;
-      bottom: -0.125rem;
-      left: -0.5rem;
-      right: -0.5rem;
-      height: 0.75rem;
-      z-index: -1;
-      background-image: url("/icons/quote_underline_light.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-   }
-
-   p > strong {
-      font-weight: 400;
-   }
-
-   p > strong::after {
-      bottom: -0.2rem;
-      height: 0.5rem;
-      left: -0.25rem;
-      right: -0.25rem;
-   }
-
-   body {
+   #container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      place-content: center;
+      top: -80px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
    }
 
-   h1, p {
-      font-family: "dosis", sans-serif;
-      max-width: 800px;
-      margin: 0 5% 1rem;
+   #quote {
+      z-index: 2;
+      font-size: 1.3rem;
    }
 
-   h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
+   .tag {
+      font-size: 1.2rem;
+      font-weight: 500;
    }
 
-   p {
-      font-size: 1.125rem;
+   #closing_tag {
+      display: flex;
+      place-content: end;
    }
+
+   i {
+      padding: 0px 20px;
+   }
+
+   #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+   }
+
+   :global(:has(.dark)) {
+      #quote {
+         color: white;
+      }
+
+      #overlay {
+         background: rgba(0, 0, 0, 10%);
+      }
+   }
+
 </style>

@@ -25,8 +25,8 @@ onclick={toggleNavbar} style="background-image: url({icons[nav_icon_var]});"></b
       <img src={icons.home} alt="home"/>
    </a></button>
 
-   <LeftItem name="contact" href="/contact" width=1.6 space="mr-3" />
-   <LeftItem name="projects" href="https://codeberg.org/rempas/" width=1.7 space=" " />
+   <LeftItem name="contact" href="/contact" width=1.8 space="mr-3" />
+   <LeftItem name="projects" href="https://codeberg.org/rempas/" width=1.85 space=" " />
 </div>
 
 <style>
@@ -44,8 +44,8 @@ onclick={toggleNavbar} style="background-image: url({icons[nav_icon_var]});"></b
          background-repeat: no-repeat;
          background-size: contain;
          background-position: center;
-         width: 1.6rem;
-         height: 1.6rem;
+         width: 1.8rem;
+         height: 1.8rem;
       }
    }
 
