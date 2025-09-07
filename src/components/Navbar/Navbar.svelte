@@ -2,7 +2,6 @@
    let { nav_type } = $props()
 
    import { divs } from '$lib/divs.svelte'
-
    import LeftNavItems from "components/Navbar/LeftNavItems.svelte"
    import QuoteOfTheDay from "components/Navbar/QuoteOfTheDay.svelte"
    import Switches from "components/Navbar/Switches.svelte"

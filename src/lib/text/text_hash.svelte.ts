@@ -1,6 +1,6 @@
 import { navbar_text, home_text, form_text } from '$lib/text/text_strings.ts'
 
-export let text: Hash<Hash<string, string>> = $state({
+export const text: Hash<Hash<string, string>> = $state({
    navbar: {
       contact: navbar_text.contact.en,
       projects: navbar_text.projects.en,

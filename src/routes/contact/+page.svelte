@@ -1,6 +1,5 @@
 <script lang="ts">
    import type { PageProps } from './$types';
-
    import { text } from '$lib/text/text_hash.svelte'
    import { divs } from '$lib/divs.svelte'
    import { tick } from 'svelte';

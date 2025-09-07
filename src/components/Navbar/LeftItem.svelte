@@ -1,13 +1,12 @@
 <script>
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
+   import { text } from '$lib/text/text_hash.svelte'
 
    let { name, href, width, space } = $props()
-
-   const text = name.charAt(0).toUpperCase() + name.slice(1)
 </script>
 
 <a {href} class="flex items-center {space}" onclick={closeNavbar}>
-   {text}
+   {@html text.navbar.name }
 
    <img src="/icons/{name}.svg" alt="{name}"
    style="width: {width}rem" class="ml-[2px]" />
