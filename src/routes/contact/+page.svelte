@@ -8,7 +8,7 @@
 
    $effect.pre(() => {
       tick().then(() => {
-         divs.app.style.backgroundImage = "url(/images/contact.jpg)"
+         divs.app.style.backgroundImage = "url(/images/back_contact.jpg)"
          closeNavbar()
       });
    });
@@ -107,11 +107,14 @@
       align-items: center;
       padding: 0.6rem 1.2rem;
       font-size: 1.1rem;
-      color: #ffe;
+      color: theme(--color-slate-700);
       gap: 10px;
-      border: none;
       border-radius: 50px;
-      background: linear-gradient(270deg, theme(--color-rose-200), #ff994f);
+      background: linear-gradient(270deg,
+         theme(--color-rose-200),
+         theme(--color-rose-300)
+      );
+
       cursor: pointer;
 
       img {
@@ -119,14 +122,26 @@
       }
    }
 
-   :global(#app.dark) {
-      :is(h2, hr) {
+   :global(.dark) {
+      h2 {
          color: theme(--color-slate-800);
       }
 
-      :is(.contact-inputs, hr) {
+      .contact-inputs, hr {
          color: theme(--color-rose-200);
-         background-color: theme(--color-slate-800);
+         background: theme(--color-slate-800);
+      }
+
+      button {
+         color: theme(--color-rose-200);
+         background: linear-gradient(270deg,
+            theme(--color-slate-700),
+            theme(--color-slate-900)
+         );
+
+         img {
+            width: 1.7rem;
+         }
       }
    }
 </style>

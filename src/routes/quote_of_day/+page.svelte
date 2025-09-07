@@ -4,6 +4,8 @@
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
    import { getQuote } from '$lib/quote_of_day.ts'
 
+   const quote = getQuote()
+
    $effect.pre(() => {
       tick().then(() => {
          divs.app.style.backgroundImage = "url(/images/quote3.svg)"
@@ -16,7 +18,7 @@
    <div id="overlay"></div>
    <div id="quote">
       <div class="tag">“</div>
-      <i>{@html getQuote()}</i>
+      <i>{@html quote[0]}</i>
       <div id="closing_tag" class="tag"><div>”</div></div>
    </div>
 </div>

@@ -23,14 +23,14 @@
       font-weight: 500;
       font-family: "Mouldy Cheese";
       font-size: 1.3rem + 1vw;
-      color: theme(--color-rose-200);
+      color: theme(--color-rose-400);
       font-size: calc(1.90rem + 0.1vw);
    }
 
    :global(:is(p:nth-child(2), p:nth-child(3))) {
       margin-top: 20px;
       text-align: justify;
-      color: theme(--color-slate-800);
+      color: theme(--color-rose-400);
    }
 
    :global(p:nth-child(2)) {
@@ -47,16 +47,20 @@
    }
 
    div :global(a) {
-      color: theme(--color-rose-200);
+      color: theme(--color-slate-800);
    }
 
    :global(.dark) {
       div :global(:is(a, h1)) {
-         color: theme(--color-slate-800);
+         color: theme(--color-slate-900);
       }
 
       :global(:is(p:nth-child(2), p:nth-child(3))) {
-         color: theme(--color-rose-200);
+         color: theme(--color-slate-800);
+      }
+
+      div :global(a) {
+         color: theme(--color-rose-900);
       }
    }
 </style>

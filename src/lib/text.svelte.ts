@@ -1,21 +1,17 @@
-let body_english: string = "<h1>Passion meets excitment!</h1><p>I am a young guy, aspiring to do big things and do his part in the big chain called. Life<br>I am a passionate freelancer, trying to make meets end by providing quality work and support to anyone in need of webpages and webapps. Additionally, for any aspiring to follow the path of software development, I offer lessons and complete course about making websites, webapps and about various programming languges</p><p>No matter what you need, I'm here to assist! Visit and fill the <a href='/contact'>contact form</a>! What are you waiting for?</p>"
+import { navbar_text, home_text, form_text } from '$lib/text/text_strings.ts'
 
-export let text: Hash<Hash<string>> = $state({
+export let text: Hash<Hash<string, string>> = $state({
    navbar: {
-      contact: "Contact",
-      projects: "Projects",
-      quote: "Quote of the day",
+      contact: navbar_text.contact.en,
+      projects: navbar_text.projects.en,
+      quote: navbar_text.quote.en,
    },
 
-   body: {
-      home: body_english,
-      contact: "",
-      quote: "",
-   },
+   home: home_text.en,
 
    form: {
-      name: "Your name",
-      email: "Your email",
-      text: "Your text",
+      name: form_text.name.en,
+      email: form_text.email.en,
+      text: form_text.text.en,
    }
 })
