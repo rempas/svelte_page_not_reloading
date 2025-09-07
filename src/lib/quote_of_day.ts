@@ -1,10 +1,10 @@
-const quotes: string[][] = [
-   [
-      "Be yourself; everyone else is already taken.",
-      "Oscar Wilde"
-   ]
+const quotes: Hash<string, string>[] = [
+   {
+      quote: "Be yourself; everyone else is already taken.",
+      person: "Oscar Wilde"
+   },
 ]
 
 export function getQuote(): string {
-   return quotes[0];
+   return quotes[0].quote;
 }

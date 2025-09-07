@@ -1,5 +1,5 @@
 <script>
-   import { text } from '$lib/text.svelte'
+   import { text } from '$lib/text/text_hash.svelte'
    import { divs } from '$lib/divs.svelte'
    import { tick } from 'svelte';
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
@@ -13,7 +13,7 @@
 </script>
 
 <div class="flex flex-col place-content-between mt-20">
-   {@html text.body.home}
+   {@html text.home}
 </div>
 
 <style lang="postcss">

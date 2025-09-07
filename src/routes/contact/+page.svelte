@@ -1,5 +1,7 @@
 <script lang="ts">
    import type { PageProps } from './$types';
+
+   import { text } from '$lib/text/text_hash.svelte'
    import { divs } from '$lib/divs.svelte'
    import { tick } from 'svelte';
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
@@ -19,14 +21,17 @@
    <form method="POST">
       <input type="hidden" name="access_key" value="b7c662f7-9e3e-476b-b862-dc23f9342776">
       <div id="form-title">
-         <h2>Contact</h2>
+         <h2>{@html text.navbar.contact}</h2>
          <hr>
       </div>
 
-      <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
-      <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
-      <textarea id="text-area" name="message" placeholder="Your text" class="contact-inputs" required></textarea>
-      <button>Submit <img src="/icons/send-arrow.svg" alt="submit-arrow-image"/></button>
+      <input type="text" name="name" placeholder={text.form.name}
+         class="contact-inputs" required>
+      <input type="email" name="email" placeholder={text.form.email}
+         class="contact-inputs" required>
+      <textarea id="text-area" name="message" class="contact-inputs"
+         placeholder={text.form.text} required> </textarea>
+      <button>{@html text.form.sumbmit}<img src="/icons/send-arrow.svg" alt="submit-arrow-image"/></button>
    </form>
 </div>
 
