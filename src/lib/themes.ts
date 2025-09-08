@@ -8,14 +8,36 @@ export function setTheme() {
 
    if (prefered_theme == null) {
       // TODO: Check the session before the user set theme
-      const user_theme = window.matchMedia('(prefers-color-scheme: dark)');)
-      console.log(user_theme)
+
+      const user_theme = window.matchMedia('(prefers-color-scheme: dark)')
+
+      if (user_theme.matches) {
+         current_theme = "dark"
+      }
+
+      else current_theme = "light"
+
+      // TODO: Set the session storage here before the user set theme
+      //sessionStorage.setItem(current_theme)
    }
+
+   else {
+      current_theme = prefered_theme
+   }
+
+   setValues()
 }
 
 export function changeTheme() {
    divs.app.classList.toggle("dark")
+   current_theme = current_theme == "light" ? "dark" : "light"
 
+   // TODO: Doesn't work! Find out why!
+   localStorage.setItem("saved_theme", current_theme)
+   setValues()
+}
+
+function setValues() {
    if (current_theme == "light") {
       icons.theme = "/icons/sun.svg"
    }
@@ -23,8 +45,6 @@ export function changeTheme() {
    else {
       icons.theme = "/icons/moon.svg"
    }
-
-   current_theme = current_theme == "light" ? "dark" : "light"
 
    icons.home = `/icons/home_${current_theme}.svg`
    icons.hamburger = `/icons/hamburger_menu_${current_theme}.svg`

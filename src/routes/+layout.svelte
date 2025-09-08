@@ -2,7 +2,7 @@
    import { tick } from 'svelte';
    import { divs } from '$lib/divs.svelte'
    import { openNavbar, hideNavbar, navbar_collapsed } from "$lib/toggleNavbar.svelte"
-   import { setLanguge } from "$lib/languges"
+   import { setLanguage } from "$lib/languages"
    import { setTheme } from "$lib/themes"
    import Navbar from 'components/Navbar/Navbar.svelte'
    import "../main.css";
@@ -12,7 +12,7 @@
 
    $effect.pre(() => {
       tick().then(() => {
-         setLanguge()
+         setLanguage()
          setTheme()
       });
    });
