@@ -1,10 +1,16 @@
 import { divs } from '$lib/divs.svelte'
 import { icons } from '$lib/icons.svelte'
 
-let current_theme = "light"
+let current_theme = "dark"
 
-export function changeLanguge() {
+export function setTheme() {
+   const prefered_theme = localStorage.getItem("saved_theme")
 
+   if (prefered_theme == null) {
+      // TODO: Check the session before the user set theme
+      const user_theme = window.matchMedia('(prefers-color-scheme: dark)');)
+      console.log(user_theme)
+   }
 }
 
 export function changeTheme() {

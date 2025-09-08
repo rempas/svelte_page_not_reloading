@@ -29,8 +29,8 @@
       <input type="email" name="email" placeholder={text.form.email}
          class="contact-inputs" required>
       <textarea id="text-area" name="message" class="contact-inputs"
-         placeholder={text.form.text} required> </textarea>
-      <button>{@html text.form.sumbmit}<img src="/icons/send-arrow.svg" alt="submit-arrow-image"/></button>
+         placeholder={text.form.text} required></textarea>
+      <button>{@html text.form.submit}<img src="/icons/send-arrow.svg" alt="submit-arrow-image"/></button>
    </form>
 </div>
 

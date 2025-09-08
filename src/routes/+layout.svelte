@@ -1,11 +1,21 @@
 <script lang="ts">
+   import { tick } from 'svelte';
    import { divs } from '$lib/divs.svelte'
    import { openNavbar, hideNavbar, navbar_collapsed } from "$lib/toggleNavbar.svelte"
+   import { setLanguge } from "$lib/languges"
+   import { setTheme } from "$lib/themes"
    import Navbar from 'components/Navbar/Navbar.svelte'
    import "../main.css";
 
    let { children } = $props()
    let app_width = $state(0)
+
+   $effect.pre(() => {
+      tick().then(() => {
+         setLanguge()
+         setTheme()
+      });
+   });
 
    $effect(() => {
       if (app_width >= 700 && !navbar_collapsed)

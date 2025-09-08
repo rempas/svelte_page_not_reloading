@@ -6,7 +6,7 @@
 </script>
 
 <a {href} class="flex items-center {space}" onclick={closeNavbar}>
-   {@html text.navbar.name }
+   {@html text.navbar[name]}
 
    <img src="/icons/{name}.svg" alt="{name}"
    style="width: {width}rem" class="ml-[2px]" />
