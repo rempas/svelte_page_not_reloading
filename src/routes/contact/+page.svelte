@@ -67,7 +67,7 @@
    h2 {
       font-weight: 600;
       font-size: 2.5rem;
-      color: theme(--color-rose-200);
+      color: theme(--color-rose-300);
       margin-bottom: 3px;
    }
 
@@ -76,7 +76,7 @@
       margin-left: 2px;
       width: 7.5rem;
       height: 0.4rem;
-      background-color: theme(--color-rose-200);
+      background-color: theme(--color-rose-300);
       border-radius: 10px;
    }
 
@@ -92,7 +92,11 @@
       padding-left: 1.15rem;
       border-radius: 50px;
       color: theme(--color-slate-800);
-      background-color: theme(--color-rose-200);
+      background-color: theme(--color-rose-300);
+   }
+
+   .contact-inputs::placeholder {
+      color: theme(--color-slate-800);
    }
 
    #text-area {
@@ -133,14 +137,19 @@
 
       .contact-inputs, hr {
          color: theme(--color-rose-200);
-         background: theme(--color-slate-800);
+         background: theme(--color-zinc-800);
+      }
+
+
+      .contact-inputs::placeholder {
+         color: theme(--color-rose-200);
       }
 
       button {
          color: theme(--color-rose-200);
          background: linear-gradient(270deg,
-            theme(--color-slate-700),
-            theme(--color-slate-900)
+            theme(--color-zinc-600),
+            theme(--color-zinc-900)
          );
 
          img {

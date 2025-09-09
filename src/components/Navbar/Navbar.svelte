@@ -8,7 +8,7 @@
 </script>
 
 <nav bind:this={divs[nav_type]} class="{nav_type} flex bg-rose-200
-rounded-[3px] text-slate-800 dark:bg-slate-900 dark:text-rose-200
+rounded-[3px] text-slate-800 dark:text-rose-200
 place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
    <LeftNavItems {nav_type} />
 
@@ -47,8 +47,15 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
       transition: left 1.5s;
    }
 
-   :global(.dark) nav.sidebar {
-      background: theme(--color-slate-900/65%);
+   :global(.dark) {
+      nav {
+         background: oklch(0.1822 0 0);
+         background: theme(--color-zinc-900);
+      }
+
+      nav.sidebar {
+         background: oklch(0.1822 0 0/65%);
+      }
    }
 
    @media (max-width: 700px) {
