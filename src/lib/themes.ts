@@ -29,20 +29,19 @@ export function setTheme() {
 }
 
 export function changeTheme() {
-   divs.app.classList.toggle("dark")
    current_theme = current_theme == "light" ? "dark" : "light"
-
-   // TODO: Doesn't work! Find out why!
    localStorage.setItem("saved_theme", current_theme)
    setValues()
 }
 
 function setValues() {
    if (current_theme == "light") {
+      divs.app.classList.remove("dark")
       icons.theme = "/icons/sun.svg"
    }
 
    else {
+      divs.app.classList.add("dark")
       icons.theme = "/icons/moon.svg"
    }
 
