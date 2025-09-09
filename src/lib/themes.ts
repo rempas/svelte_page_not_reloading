@@ -7,8 +7,6 @@ export function setTheme() {
    const prefered_theme = localStorage.getItem("saved_theme")
 
    if (prefered_theme == null) {
-      // TODO: Check the session before the user set theme
-
       const user_theme = window.matchMedia('(prefers-color-scheme: dark)')
 
       if (user_theme.matches) {
@@ -16,9 +14,6 @@ export function setTheme() {
       }
 
       else current_theme = "light"
-
-      // TODO: Set the session storage here before the user set theme
-      //sessionStorage.setItem(current_theme)
    }
 
    else {
@@ -37,12 +32,12 @@ export function changeTheme() {
 function setValues() {
    if (current_theme == "light") {
       divs.app.classList.remove("dark")
-      icons.theme = "/icons/sun.svg"
+      icons.theme = "/icons/moon.svg"
    }
 
    else {
       divs.app.classList.add("dark")
-      icons.theme = "/icons/moon.svg"
+      icons.theme = "/icons/sun.svg"
    }
 
    icons.home = `/icons/home_${current_theme}.svg`
