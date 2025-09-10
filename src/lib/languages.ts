@@ -1,14 +1,5 @@
 import { text } from '$lib/text.svelte'
-import { navbar_text } from '$text/navbar_text'
-import { home_text } from '$text/home_text'
-import { form_text } from '$text/form_text'
-
 import { icons } from '$lib/icons.svelte'
-
-// TODO: Make this a function in the "text" hash
-import { navbar_text } from '$text/navbar_text'
-import { home_text } from '$text/home_text'
-import { form_text } from '$text/form_text'
 
 let current_language = "en"
 
@@ -42,15 +33,7 @@ export function changeLanguage() {
    setValues()
 }
 
-// TODO: Make this a function in the "text" hash
 function setValues() {
-   text.navbar.contact = navbar_text.contact[current_language]
-   text.navbar.projects = navbar_text.projects[current_language]
-   text.navbar.quote = navbar_text.quote[current_language]
-   text.home = home_text[current_language]
-   text.form.name = form_text.name[current_language]
-   text.form.email = form_text.email[current_language]
-   text.form.message = form_text.message[current_language]
-   text.form.submit = form_text.submit[current_language]
+   text.update(current_language)
    icons.languages = `/icons/languge_${current_language}.svg`
 }

@@ -64,7 +64,7 @@
 
       #home_icon {
          position: absolute;
-         top: 13px;
+         top: 0.8rem;
          right: 0px;
       }
    }

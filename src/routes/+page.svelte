@@ -1,5 +1,5 @@
 <script>
-   import { text } from '$lib/text/text_hash.svelte'
+   import { text } from '$lib/text.svelte'
    import { divs } from '$lib/divs.svelte'
    import { tick } from 'svelte';
    import { closeNavbar } from "$lib/toggleNavbar.svelte"

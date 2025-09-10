@@ -39,6 +39,4 @@ function setValues() {
       divs.app.classList.add("dark")
       icons.theme = "/icons/sun.svg"
    }
-
-   icons.home = `/icons/home_${current_theme}.svg`
 }
