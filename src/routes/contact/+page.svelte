@@ -2,6 +2,7 @@
    import type { PageProps } from './$types';
    import { text } from '$lib/text/text_hash.svelte'
    import { divs } from '$lib/divs.svelte'
+   import { icons } from '$lib/icons.svelte'
    import { tick } from 'svelte';
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
 
@@ -29,8 +30,10 @@
       <input type="email" name="email" placeholder={text.form.email}
          class="contact-inputs" required>
       <textarea id="text-area" name="message" class="contact-inputs"
-         placeholder={text.form.text} required></textarea>
-      <button>{@html text.form.submit}<img src="/icons/send-arrow.svg" alt="submit-arrow-image"/></button>
+         placeholder={text.form.message} required></textarea>
+      <!-- <button>{@html text.form.submit}<img src={icons.send_arrow(10)} alt="submit-arrow-image"/></button> -->
+
+      <button>{@html text.form.submit}{@html icons.send_arrow(2)}</button>
    </form>
 </div>
 
@@ -91,12 +94,12 @@
       padding-left: 20px;
       padding-left: 1.15rem;
       border-radius: 50px;
-      color: theme(--color-slate-800);
+      color: theme(--color-zinc-900);
       background-color: theme(--color-rose-300);
    }
 
    .contact-inputs::placeholder {
-      color: theme(--color-slate-800);
+      color: theme(--color-zinc-900);
    }
 
    #text-area {
@@ -115,7 +118,7 @@
       align-items: center;
       padding: 0.6rem 1.2rem;
       font-size: 1.1rem;
-      color: theme(--color-slate-700);
+      color: theme(--color-zinc-900);
       gap: 10px;
       border-radius: 50px;
       background: linear-gradient(270deg,
@@ -126,6 +129,7 @@
       cursor: pointer;
 
       img {
+         /* filter: invert(100%) sepia(40%) saturate(3084%) hue-rotate(182deg) brightness(106%) contrast(103%); */
          width: 1.7rem;
       }
    }

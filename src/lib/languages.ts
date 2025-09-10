@@ -40,6 +40,6 @@ function setValues() {
    text.home = home_text[current_language]
    text.form.name = form_text.name[current_language]
    text.form.email = form_text.email[current_language]
-   text.form.text = form_text.text[current_language]
+   text.form.message = form_text.message[current_language]
    text.form.submit = form_text.submit[current_language]
 }

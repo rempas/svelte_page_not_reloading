@@ -24,18 +24,18 @@ export const navbar_text: hash<hash<string, string>> = {
 
 export const form_text: hash<hash<string, string>> = {
    name: {
-      en: "Your name",
-      el: "Το Ονόμα σου",
+      en: "Name",
+      el: "Όνομα",
    },
 
    email: {
-      en: "Your email",
-      el: "Το email σου"
+      en: "Email",
+      el: "Email"
    },
 
-   text: {
-      en: "Your text",
-      el: "Το κείμενο σου",
+   message: {
+      en: "Message",
+      el: "Μήνυμα",
    },
 
    submit: {

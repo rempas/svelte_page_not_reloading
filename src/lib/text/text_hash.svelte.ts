@@ -12,7 +12,7 @@ export const text: Hash<Hash<string, string>> = $state({
    form: {
       name: form_text.name.en,
       email: form_text.email.en,
-      text: form_text.text.en,
+      message: form_text.message.en,
       submit: form_text.submit.en
    }
 })

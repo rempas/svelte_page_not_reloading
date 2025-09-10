@@ -41,4 +41,8 @@ bind:clientWidth={app_width}>
       background-size: cover;
       background-position: center;
    }
+
+   :global(.IconToStroke path) {
+      color: oklch(0.279 0.041 260.031);
+   }
 </style>
