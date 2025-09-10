@@ -1,6 +1,6 @@
-import { navbar_text } from '$text/navbar_text.ts'
-import { home_text } from '$text/home_text.ts'
-import { form_text } from '$text/form_text.ts'
+import { navbar_text } from '$text/navbar_text'
+import { home_text } from '$text/home_text'
+import { form_text } from '$text/form_text'
 
 export const text: Hash<Hash<string, string>> = $state({
    navbar: {

@@ -40,9 +40,5 @@ function setValues() {
       icons.theme = "/icons/sun.svg"
    }
 
-   // icons.home = `/icons/home_${current_theme}.svg`
-   // icons.hamburger = `/icons/hamburger_menu_${current_theme}.svg`
-   // icons.close_btn = `/icons/close_button_${current_theme}.svg`
-   // icons.underline = `/icons/quote_underline_${current_theme}.svg`
-   // icons.send_arrow = `/icons/send_arrow_${current_theme}.svg`
+   icons.home = `/icons/home_${current_theme}.svg`
 }

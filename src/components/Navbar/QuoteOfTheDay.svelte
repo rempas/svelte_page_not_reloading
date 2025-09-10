@@ -1,6 +1,6 @@
 <script lang="ts">
    import { icons } from '$lib/icons.svelte'
-   import { text } from '$lib/text/text_hash.svelte'
+   import { text } from '$lib/text.svelte'
 </script>
 
 <div class="flex flex-col place-content-between items-center h-[2rem]">

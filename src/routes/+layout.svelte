@@ -4,7 +4,7 @@
    import { openNavbar, hideNavbar, navbar_collapsed } from "$lib/toggleNavbar.svelte"
    import { setLanguage } from "$lib/languages"
    import { setTheme } from "$lib/themes"
-   import Navbar from 'components/Navbar/Navbar.svelte'
+   import Navbar from '$navbar/Navbar.svelte'
    import "../main.css";
 
    let { children } = $props()

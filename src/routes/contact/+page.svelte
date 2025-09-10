@@ -1,6 +1,6 @@
 <script lang="ts">
    import type { PageProps } from './$types';
-   import { text } from '$lib/text/text_hash.svelte'
+   import { text } from '$lib/text.svelte'
    import { divs } from '$lib/divs.svelte'
    import { icons } from '$lib/icons.svelte'
    import { tick } from 'svelte';
@@ -31,9 +31,7 @@
          class="contact-inputs" required>
       <textarea id="text-area" name="message" class="contact-inputs"
          placeholder={text.form.message} required></textarea>
-      <!-- <button>{@html text.form.submit}<img src={icons.send_arrow(10)} alt="submit-arrow-image"/></button> -->
-
-      <button>{@html text.form.submit}{@html icons.send_arrow(2)}</button>
+      <button>{@html text.form.submit}{@html icons.send_arrow}</button>
    </form>
 </div>
 

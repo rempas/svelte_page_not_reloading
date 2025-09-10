@@ -1,6 +1,6 @@
 <script>
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
-   import { text } from '$lib/text/text_hash.svelte'
+   import { text } from '$lib/text.svelte'
 
    let { name, href, width, space } = $props()
 </script>

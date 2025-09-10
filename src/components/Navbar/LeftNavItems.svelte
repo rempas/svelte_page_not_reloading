@@ -1,7 +1,7 @@
 <script>
    import { icons } from '$lib/icons.svelte'
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
-   import LeftItem from "components/Navbar/LeftItem.svelte"
+   import LeftItem from "$navbar/LeftItem.svelte"
    import toggleNavbar from "$lib/toggleNavbar.svelte"
 
    let { nav_type } = $props()
@@ -22,7 +22,7 @@
 <div id="left_items" class="flex">
    <button id="home_icon" aria-label="home_button"
    class="mr-5" onclick={closeNavbar}><a href="/">
-      <img src={icons.home} alt="home"/>
+      {@html icons.home}
    </a></button>
 
    <LeftItem name="contact" href="/contact" width=1.8 space="mr-3" />

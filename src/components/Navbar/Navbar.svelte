@@ -2,9 +2,9 @@
    let { nav_type } = $props()
 
    import { divs } from '$lib/divs.svelte'
-   import LeftNavItems from "components/Navbar/LeftNavItems.svelte"
-   import QuoteOfTheDay from "components/Navbar/QuoteOfTheDay.svelte"
-   import Switches from "components/Navbar/Switches.svelte"
+   import LeftNavItems from "$navbar/LeftNavItems.svelte"
+   import QuoteOfTheDay from "$navbar/QuoteOfTheDay.svelte"
+   import Switches from "$navbar/Switches.svelte"
 </script>
 
 <nav bind:this={divs[nav_type]} class="{nav_type} flex bg-rose-200
