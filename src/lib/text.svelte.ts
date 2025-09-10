@@ -19,13 +19,13 @@ export const text: Hash<Hash<string, string>> = $state({
    },
 
    update(current_language) {
-      self.navbar.contact = navbar_text.contact[current_language]
-      self.navbar.projects = navbar_text.projects[current_language]
-      self.navbar.quote = navbar_text.quote[current_language]
-      self.home = home_text[current_language]
-      self.form.name = form_text.name[current_language]
-      self.form.email = form_text.email[current_language]
-      self.form.message = form_text.message[current_language]
-      self.form.submit = form_text.submit[current_language]
+      this.navbar.contact = navbar_text.contact[current_language]
+      this.navbar.projects = navbar_text.projects[current_language]
+      this.navbar.quote = navbar_text.quote[current_language]
+      this.home = home_text[current_language]
+      this.form.name = form_text.name[current_language]
+      this.form.email = form_text.email[current_language]
+      this.form.message = form_text.message[current_language]
+      this.form.submit = form_text.submit[current_language]
    }
 })
