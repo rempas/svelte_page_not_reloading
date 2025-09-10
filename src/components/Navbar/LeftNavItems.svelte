@@ -1,23 +1,23 @@
 <script>
    import { icons } from '$lib/icons.svelte'
    import { closeNavbar } from "$lib/toggleNavbar.svelte"
-
    import LeftItem from "components/Navbar/LeftItem.svelte"
    import toggleNavbar from "$lib/toggleNavbar.svelte"
 
    let { nav_type } = $props()
-
-   let nav_icon_var = $state("")
+   let sidebar_icon = $state(``)
 
    if (nav_type == "normal")
-      nav_icon_var = "hamburger"
+      sidebar_icon = icons.hamburger
    else
-      nav_icon_var = "close_btn"
+      sidebar_icon = icons.close_btn
 
 </script>
 
-<button aria-label="hamburger menu" id="hamburger_menu"
-onclick={toggleNavbar} style="background-image: url({icons[nav_icon_var]});"></button>
+<!-- TODO: Traget the item by its aria-label instead of its id -->
+<button aria-label="hamburger menu" id="hamburger_menu" onclick={toggleNavbar}>
+   {@html sidebar_icon}
+</button>
 
 <div id="left_items" class="flex">
    <button id="home_icon" aria-label="home_button"
@@ -41,9 +41,6 @@ onclick={toggleNavbar} style="background-image: url({icons[nav_icon_var]});"></b
    @media (max-width: 700px) {
       #hamburger_menu {
          display: block;
-         background-repeat: no-repeat;
-         background-size: contain;
-         background-position: center;
          width: 1.8rem;
          height: 1.8rem;
       }

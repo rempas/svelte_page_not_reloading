@@ -9,7 +9,9 @@ const config = {
 
    kit: {
       alias: {
-         "components/*": "src/components/*"
+         "components/*": "src/components/*",
+         "text/*": "src/text/*",
+         "icons/*": "src/icons/*"
       },
 
       // adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.

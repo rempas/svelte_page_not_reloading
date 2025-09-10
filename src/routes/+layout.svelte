@@ -42,7 +42,13 @@ bind:clientWidth={app_width}>
       background-position: center;
    }
 
-   :global(.IconToStroke path) {
+   :global(.IconToColor path) {
       color: oklch(0.279 0.041 260.031);
+   }
+
+   :global(.dark) {
+      :global(.IconToColor path) {
+         color: oklch(0.8357 0.1886 126.24);
+      }
    }
 </style>
