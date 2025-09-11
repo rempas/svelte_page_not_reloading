@@ -53,7 +53,7 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
 
    :global(.dark) {
       nav {
-         background: oklch(0.1822 0 0);
+         color: theme(--color-red-200);
          background: theme(--color-zinc-900);
       }
 

@@ -47,6 +47,7 @@
    @reference "tailwindcss";
 
    #contact_form_div {
+      color: theme(--color-rose-200);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,7 +69,6 @@
    h2 {
       font-weight: 600;
       font-size: 2.5rem;
-      color: theme(--color-rose-200);
       margin-bottom: 3px;
    }
 
@@ -88,16 +88,13 @@
       height: 3rem;
       max-height: 60px;
       padding-top: 0.1rem;
-      padding-left: 1rem;
-      padding-left: 20px;
       padding-left: 1.15rem;
       border-radius: 50px;
-      color: theme(--color-zinc-800);
       background-color: theme(--color-rose-200);
    }
 
-   .contact-inputs {
-      color: theme(--color-zinc-800);
+   .contact-inputs, .contact-inputs::placeholder {
+      color: theme(--color-zinc-700);
    }
 
    #text-area {
