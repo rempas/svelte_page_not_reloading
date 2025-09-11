@@ -34,5 +34,5 @@ export function changeLanguage() {
 
 function setValues() {
    text.update(current_language)
-   icons.flag = current_language == 'el'? en_icon(1.5) : el_icon(1.5)
+   icons.flag = current_language == 'en'? en_icon(1.5) : el_icon(1.5)
 }

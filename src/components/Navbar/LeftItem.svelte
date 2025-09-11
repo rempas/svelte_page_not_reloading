@@ -13,8 +13,4 @@
 
 <style lang="postcss">
    @reference "tailwindcss";
-
-   a:hover {
-      color: theme(--color-rose-300);
-   }
 </style>

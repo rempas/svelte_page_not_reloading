@@ -31,14 +31,6 @@
       width: 1.55rem;
    }
 
-   #house_chimney {
-      color: green;
-   }
-
-   #house_door {
-      color: yellow;
-   }
-
    @media (max-width: 700px) {
       #normal {
          display: none;
@@ -69,7 +61,7 @@
 
       a {
          position: absolute;
-         top: 0.8rem;
+         top: 0.6rem;
          right: 0px;
       }
    }

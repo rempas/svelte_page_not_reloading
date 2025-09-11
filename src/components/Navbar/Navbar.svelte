@@ -47,6 +47,10 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
       transition: left 1.5s;
    }
 
+   :global(a:hover) {
+      color: theme(--color-rose-400);
+   }
+
    :global(.dark) {
       nav {
          background: oklch(0.1822 0 0);
@@ -56,5 +60,10 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
       nav.sidebar {
          background: oklch(0.1822 0 0/65%);
       }
+
+      :global(a:hover) {
+         color: theme(--color-zinc-500);
+      }
+
    }
 </style>
