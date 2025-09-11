@@ -11,10 +11,10 @@ const icon_size = 2
 export const icons: Hash<string> = $state({
    flag: "",
    theme: "",
-   home: home_icon(icon_size - 0.2),
+   home: home_icon(icon_size - 0.3),
    hamburger: hamburger_icon(icon_size - 0.1),
    close: close_icon(icon_size),
-   underline: underline_icon(icon_size),
+   underline: underline_icon(icon_size + 6),
    send_arrow: send_arrow_icon(icon_size),
    contact: contact_icon(icon_size),
    projects: projects_icon(icon_size),

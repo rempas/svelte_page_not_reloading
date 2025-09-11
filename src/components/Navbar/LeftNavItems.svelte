@@ -20,10 +20,14 @@
 </button>
 
 <div id="left_items" class="flex">
-   <button id="home_icon" aria-label="home_button"
-   class="mr-5" onclick={closeNavbar}><a href="/">
+   <!-- <button id="home_icon" aria-label="home_button" -->
+   <!-- class="mr-5" onclick={closeNavbar}><a href="/"> -->
+   <!--    {@html icons.home} -->
+   <!-- </a></button> -->
+
+   <a class="mr-5" href="/" onclick={closeNavbar}>
       {@html icons.home}
-   </a></button>
+   </a>
 
    <LeftItem name="contact" href="/contact" width=1.8 space="mr-3" />
    <LeftItem name="projects" href="https://codeberg.org/rempas/" width=1.85 space=" " />
