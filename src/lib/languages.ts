@@ -8,10 +8,7 @@ export function setLanguage() {
 
    if (prefered_language == null) {
       const user_languages = navigator.languages
-      console.log("languages: ", user_languages)
-
       const has_el = user_languages.find((element) => element == "el-GR" || element == "el-CY")
-      console.log("has_el: ", has_el)
 
       if (has_el != undefined) {
          current_language = "el"
@@ -35,5 +32,5 @@ export function changeLanguage() {
 
 function setValues() {
    text.update(current_language)
-   icons.languages = `/icons/languge_${current_language}.svg`
+   icons.flag = `/icons/${current_language}_flag.svg`
 }
