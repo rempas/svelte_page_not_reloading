@@ -1,5 +1,7 @@
 import { text } from '$lib/text.svelte'
 import { icons } from '$lib/icons.svelte'
+import { en_icon } from '$icons/en'
+import { el_icon } from '$icons/el'
 
 let current_language = "en"
 
@@ -32,5 +34,5 @@ export function changeLanguage() {
 
 function setValues() {
    text.update(current_language)
-   icons.flag = `/icons/${current_language}_flag.svg`
+   icons.flag = current_language == 'el'? en_icon(1.5) : el_icon(1.5)
 }

@@ -11,7 +11,7 @@
    {@html icons[nav_icon]}
 </button>
 
-<div id={nav_type} class="flex">
+<div id={nav_type} class="flex items-center">
    <a class="mr-5" href="/" onclick={closeNavbar}>
       {@html icons.home}
    </a>
@@ -29,6 +29,14 @@
 
    img {
       width: 1.55rem;
+   }
+
+   #house_chimney {
+      color: green;
+   }
+
+   #house_door {
+      color: yellow;
    }
 
    @media (max-width: 700px) {

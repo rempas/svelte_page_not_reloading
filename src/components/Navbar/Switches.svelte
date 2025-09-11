@@ -4,9 +4,9 @@
    import { icons } from '$lib/icons.svelte'
 </script>
 
-<div id="switches" class="flex gap-[0.7rem]">
-   <button onclick={changeLanguage}><img src={icons.flag} alt="flag"/></button>
-   <button onclick={changeTheme}><img src={icons.theme} alt="theme"/></button>
+<div id="switches" class="flex gap-[12px]">
+   <button onclick={changeLanguage}>{@html icons.flag}</button>
+   <button onclick={changeTheme}>{@html icons.theme}</button>
 </div>
 
 <style>

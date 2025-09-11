@@ -43,7 +43,7 @@ bind:clientWidth={app_width}>
    }
 
    :global(.IconToColor path) {
-      color: oklch(0.279 0.041 260.031);
+      color: oklch(0.284 0.0695 269.17);
    }
 
    :global(.dark) {

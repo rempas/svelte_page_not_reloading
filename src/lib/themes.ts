@@ -1,5 +1,7 @@
 import { divs } from '$lib/divs.svelte'
 import { icons } from '$lib/icons.svelte'
+import { sun_icon } from '$icons/sun'
+import { moon_icon } from '$icons/moon'
 
 let current_theme = "dark"
 
@@ -32,11 +34,11 @@ export function changeTheme() {
 function setValues() {
    if (current_theme == "light") {
       divs.app.classList.remove("dark")
-      icons.theme = "/icons/moon.svg"
+      icons.theme = moon_icon(1.5)
    }
 
    else {
       divs.app.classList.add("dark")
-      icons.theme = "/icons/sun.svg"
+      icons.theme = sun_icon(1.5)
    }
 }
