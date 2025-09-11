@@ -1,5 +1,5 @@
 <script>
-   let { nav_type } = $props()
+   let { nav_type, nav_icon } = $props()
 
    import { divs } from '$lib/divs.svelte'
    import LeftNavItems from "$navbar/LeftNavItems.svelte"
@@ -10,7 +10,7 @@
 <nav bind:this={divs[nav_type]} class="{nav_type} flex bg-rose-200
 rounded-[3px] text-slate-800 dark:text-rose-200
 place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
-   <LeftNavItems {nav_type} />
+   <LeftNavItems {nav_type} {nav_icon} />
 
    {#if nav_type == "normal"}
       <QuoteOfTheDay />
@@ -55,12 +55,6 @@ place-content-between px-3 h-[2.25rem] rounded-[3px] items-center">
 
       nav.sidebar {
          background: oklch(0.1822 0 0/65%);
-      }
-   }
-
-   @media (max-width: 700px) {
-      nav.normal :global(#left_items) {
-         display: none;
       }
    }
 </style>

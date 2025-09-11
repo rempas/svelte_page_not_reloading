@@ -1,14 +1,12 @@
 export const moon_icon = (size) => `<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="800px" height="800px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
 <g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M32,14.002c-9.941,0-18,8.059-18,18s8.059,18,18,18
-		s18-8.059,18-18S41.941,14.002,32,14.002z M32,48.002c-8.837,0-16-7.164-16-16s7.163-16,16-16s16,7.164,16,16
-		S40.837,48.002,32,48.002z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M63,31H53c-0.553,0-1,0.447-1,1s0.447,1,1,1h10
-		c0.553,0,1-0.447,1-1S63.553,31,63,31z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M11.457,36.469l-3.863,1.035
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M32,14.002c-9.941,0-18,8.059-18,18s8.059,18,18,18
+	s18-8.059,18-18S41.941,14.002,32,14.002z M32,48.002c-8.837,0-16-7.164-16-16s7.163-16,16-16s16,7.164,16,16 S40.837,48.002,32,48.002z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M63,31H53c-0.553,0-1,0.447-1,1s0.447,1,1,1h10
+	c0.553,0,1-0.447,1-1S63.553,31,63,31z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M11.457,36.469l-3.863,1.035
 		c-0.534,0.145-0.851,0.693-0.707,1.227c0.143,0.533,0.69,0.85,1.225,0.705l3.863-1.035c0.533-0.143,0.85-0.689,0.707-1.225
 		C12.539,36.643,11.99,36.326,11.457,36.469z"/>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#394240" d="M49.32,22c0.277,0.479,0.888,0.643,1.367,0.365l8.66-5

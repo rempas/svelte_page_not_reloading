@@ -6,7 +6,7 @@
 
    $effect.pre(() => {
       tick().then(() => {
-         divs.app.style.backgroundImage = "url(/images/quote1.svg)"
+         divs.app.style.backgroundImage = "url(/images/home.svg)"
          closeNavbar()
       });
    });

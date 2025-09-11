@@ -28,8 +28,8 @@
 
 <div bind:this={divs.app} id="app" class="flex flex-col"
 bind:clientWidth={app_width}>
-   <Navbar nav_type="normal"/>
-   <Navbar nav_type="sidebar"/>
+   <Navbar nav_type="normal" nav_icon="hamburger" />
+   <Navbar nav_type="sidebar" nav_icon="close"/>
 
    {@render children()}
 </div>

@@ -4,27 +4,14 @@
    import LeftItem from "$navbar/LeftItem.svelte"
    import toggleNavbar from "$lib/toggleNavbar.svelte"
 
-   let { nav_type } = $props()
-   let sidebar_icon = $state(``)
-
-   if (nav_type == "normal")
-      sidebar_icon = icons.hamburger
-   else
-      sidebar_icon = icons.close_btn
-
+   let { nav_icon, nav_type } = $props()
 </script>
 
-<!-- TODO: Traget the item by its aria-label instead of its id -->
-<button aria-label="hamburger menu" id="hamburger_menu" onclick={toggleNavbar}>
-   {@html sidebar_icon}
+<button aria-label="hamburger menu" onclick={toggleNavbar}>
+   {@html icons[nav_icon]}
 </button>
 
-<div id="left_items" class="flex">
-   <!-- <button id="home_icon" aria-label="home_button" -->
-   <!-- class="mr-5" onclick={closeNavbar}><a href="/"> -->
-   <!--    {@html icons.home} -->
-   <!-- </a></button> -->
-
+<div id={nav_type} class="flex">
    <a class="mr-5" href="/" onclick={closeNavbar}>
       {@html icons.home}
    </a>
@@ -34,8 +21,10 @@
 </div>
 
 <style>
-   #hamburger_menu {
+   button {
       display: none;
+      /* NOTE: I shouldn't had to do that! A button shoul always automitaclly have the pointer! Report this bug! */
+      cursor: pointer;
    }
 
    img {
@@ -43,7 +32,11 @@
    }
 
    @media (max-width: 700px) {
-      #hamburger_menu {
+      #normal {
+         display: none;
+      }
+
+      button {
          display: block;
          width: 1.8rem;
          height: 1.8rem;
@@ -52,21 +45,21 @@
 
    /* Sidebar */
    :global(nav.sidebar) {
-      #left_items {
+      div {
          margin-top: 120px;
          flex-direction: column;
          justify-content: space-between;
          height: 6rem;
       }
 
-      #hamburger_menu {
+      button {
          position: fixed;
          top: calc(10px + 0.2rem);
          left: 24px;
          width: 1.6rem;
       }
 
-      #home_icon {
+      a {
          position: absolute;
          top: 0.8rem;
          right: 0px;

@@ -10,7 +10,7 @@
 
    $effect.pre(() => {
       tick().then(() => {
-         divs.app.style.backgroundImage = "url(/images/back_contact.jpg)"
+         divs.app.style.backgroundImage = "url(/images/contact.jpg)"
          closeNavbar()
       });
    });
@@ -68,7 +68,7 @@
    h2 {
       font-weight: 600;
       font-size: 2.5rem;
-      color: theme(--color-rose-300);
+      color: theme(--color-rose-200);
       margin-bottom: 3px;
    }
 
@@ -77,7 +77,7 @@
       margin-left: 2px;
       width: 7.5rem;
       height: 0.4rem;
-      background-color: theme(--color-rose-300);
+      background-color: theme(--color-rose-200);
       border-radius: 10px;
    }
 
@@ -92,12 +92,12 @@
       padding-left: 20px;
       padding-left: 1.15rem;
       border-radius: 50px;
-      color: theme(--color-zinc-900);
-      background-color: theme(--color-rose-300);
+      color: theme(--color-zinc-800);
+      background-color: theme(--color-rose-200);
    }
 
-   .contact-inputs::placeholder {
-      color: theme(--color-zinc-900);
+   .contact-inputs {
+      color: theme(--color-zinc-800);
    }
 
    #text-area {
@@ -116,7 +116,7 @@
       align-items: center;
       padding: 0.6rem 1.2rem;
       font-size: 1.1rem;
-      color: theme(--color-zinc-900);
+      color: theme(--color-zinc-800);
       gap: 10px;
       border-radius: 50px;
       background: linear-gradient(270deg,
@@ -137,14 +137,9 @@
          color: theme(--color-slate-800);
       }
 
-      .contact-inputs, hr {
+      .contact-inputs, ::placeholder, hr {
          color: theme(--color-rose-200);
          background: theme(--color-zinc-800);
-      }
-
-
-      .contact-inputs::placeholder {
-         color: theme(--color-rose-200);
       }
 
       button {
