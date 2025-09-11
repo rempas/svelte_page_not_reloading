@@ -17,7 +17,7 @@
 </script>
 
 <!-- try to not have to use the "contact-inputs" class and also style the first input and see if there is a problem with that -->
-<div id="contact_form_div">
+<div id="contact_form">
    <form method="POST">
       <input type="hidden" name="access_key" value="b7c662f7-9e3e-476b-b862-dc23f9342776">
       <div id="form-title">
@@ -46,11 +46,12 @@
 <style lang="postcss">
    @reference "tailwindcss";
 
-   #contact_form_div {
+   #contact_form {
       color: theme(--color-rose-200);
       display: flex;
       justify-content: center;
       align-items: center;
+      height: stretch;
       margin-top: calc(1rem + 10dvh);
    }
 
@@ -90,6 +91,7 @@
       padding-top: 0.1rem;
       padding-left: 1.15rem;
       border-radius: 50px;
+      outline: none;
       background-color: theme(--color-rose-200);
    }
 
@@ -97,6 +99,7 @@
       color: theme(--color-zinc-700);
    }
 
+   /* NOTE: "textarea" doesn't work here. Report this! */
    #text-area {
       height: 8rem;
       max-height: 170px;
@@ -105,10 +108,11 @@
    }
 
    .contact-inputs:focus {
-      border: 2px solid #ff994f;
+      border: calc(1.1px + 0.1rem) solid theme(--color-rose-300);
    }
 
    button {
+      cursor: pointer;
       display: flex;
       align-items: center;
       padding: 0.6rem 1.2rem;
@@ -120,13 +124,6 @@
          theme(--color-rose-200),
          theme(--color-rose-300)
       );
-
-      cursor: pointer;
-
-      img {
-         /* filter: invert(100%) sepia(40%) saturate(3084%) hue-rotate(182deg) brightness(106%) contrast(103%); */
-         width: 1.7rem;
-      }
    }
 
    :global(.dark) {
@@ -139,16 +136,16 @@
          background: theme(--color-zinc-800);
       }
 
+      .contact-inputs:focus {
+         border: calc(1.1px + 0.1rem) solid theme(--color-slate-500);
+      }
+
       button {
          color: theme(--color-rose-200);
          background: linear-gradient(270deg,
             theme(--color-zinc-600),
             theme(--color-zinc-900)
          );
-
-         img {
-            width: 1.7rem;
-         }
       }
    }
 </style>
