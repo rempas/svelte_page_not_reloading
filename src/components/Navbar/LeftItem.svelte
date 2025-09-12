@@ -7,7 +7,7 @@
 </script>
 
 <a {href} class="flex items-center {space}" onclick={closeNavbar}>
-   <div class="mr-1">{@html text.navbar[name]}</div>
+   <div class="mr-2">{@html text.navbar[name]}</div>
    {@html icons[name]}
 </a>
 
